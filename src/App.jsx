@@ -1,16 +1,25 @@
 import Profile from "./components/Profile/Profile";
-import userData from "./userData.json";
+import FriendList from "./components/FriendList/FriendList";
+import TaransactionHistory from "./components/TransactionHistory/TransactionHistory";
+
+import usersData from "./usersData.json";
+import friendsData from "./friendsData.json";
+import transactionsData from "./transactionsData.json";
 
 const App = () => {
   return (
     <>
       <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
+        name={usersData.username}
+        tag={usersData.tag}
+        location={usersData.location}
+        image={usersData.avatar}
+        stats={usersData.stats}
       />
+
+      <FriendList friends={friendsData} />
+
+      <TaransactionHistory items={transactionsData} />
     </>
   );
 };
