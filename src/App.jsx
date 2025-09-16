@@ -5,21 +5,30 @@ import TaransactionHistory from "./components/TransactionHistory/TransactionHist
 import usersData from "./usersData.json";
 import friendsData from "./friendsData.json";
 import transactionsData from "./transactionsData.json";
+import styles from "./app.module.css";
 
 const App = () => {
   return (
     <>
-      <Profile
-        name={usersData.username}
-        tag={usersData.tag}
-        location={usersData.location}
-        image={usersData.avatar}
-        stats={usersData.stats}
-      />
+      <div className={styles.container}>
+        <div className={styles.profile}>
+          <Profile
+            name={usersData.username}
+            tag={usersData.tag}
+            location={usersData.location}
+            image={usersData.avatar}
+            stats={usersData.stats}
+          />
+        </div>
 
-      <FriendList friends={friendsData} />
+        <div className={styles.friendList}>
+          <FriendList friends={friendsData} />
+        </div>
 
-      <TaransactionHistory items={transactionsData} />
+        <div className={styles.transactionHistory}>
+          <TaransactionHistory items={transactionsData} />
+        </div>
+      </div>
     </>
   );
 };
