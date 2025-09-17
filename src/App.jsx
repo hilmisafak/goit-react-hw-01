@@ -1,6 +1,6 @@
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
-import TaransactionHistory from "./components/TransactionHistory/TransactionHistory";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 import usersData from "./usersData.json";
 import friendsData from "./friendsData.json";
@@ -29,7 +29,7 @@ const App = () => {
 
         <section className={styles.section}>
           <h2 className={styles.title}>Transaction History</h2>
-          <TaransactionHistory items={transactionsData} />
+          <TransactionHistory items={transactionsData} />
         </section>
       </div>
     </>
