@@ -2,9 +2,11 @@
   list-style: none;
   padding: 0;
   margin: 20px auto;
-  width: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .item {
-  margin-bottom: 10px;
+  flex: 0 1 auto;
 }

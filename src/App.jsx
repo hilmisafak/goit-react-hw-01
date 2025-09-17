@@ -11,7 +11,8 @@ const App = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.profile}>
+        <section className={styles.section}>
+          <h2 className={styles.title}>Profiles</h2>
           <Profile
             name={usersData.username}
             tag={usersData.tag}
@@ -19,15 +20,17 @@ const App = () => {
             image={usersData.avatar}
             stats={usersData.stats}
           />
-        </div>
+        </section>
 
-        <div className={styles.friendList}>
+        <section className={styles.section}>
+          <h2 className={styles.title}>Friends</h2>
           <FriendList friends={friendsData} />
-        </div>
+        </section>
 
-        <div className={styles.transactionHistory}>
+        <section className={styles.section}>
+          <h2 className={styles.title}>Transaction History</h2>
           <TaransactionHistory items={transactionsData} />
-        </div>
+        </section>
       </div>
     </>
   );
