@@ -5,7 +5,7 @@ import TransactionHistory from "./components/TransactionHistory/TransactionHisto
 import usersData from "./usersData.json";
 import friendsData from "./friendsData.json";
 import transactionsData from "./transactionsData.json";
-import styles from "./app.module.css";
+import styles from "./App.module.css";
 
 const App = () => {
   return (
